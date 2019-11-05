@@ -31,11 +31,17 @@ build/
 .vscode/
 
 spirngBackend/demo/.idea/
-springBackend/demo/main/resources/application.yml
+springBackend/demo/src/main/resources/application.yml
 testDB/
 
 rustCLIWeb/.git/
 rustCLIWeb/.idea/
+rustCLIWeb/target/debug/.fingerprint/
+rustCLIWeb/target/debug/deps/
+rustCLIWeb/target/debug/incremental/
+rustCLIWeb/target/debug/rustCLIWeb-dcc2038a40c568e4
+rustCLIWeb/target/debug/rustCLIWeb-dcc2038a40c568e4.d
+rustCLIWeb/target/debug/rustCLIWeb.d
 
 react_site/.idea/
 react_site/node_modules/
