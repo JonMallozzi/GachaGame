@@ -18,7 +18,7 @@ function Homepage(){
             </p>
             <a
                 className="App-link"
-                href="https://twitter.com/kalei71"
+                href="https://twitter.com/BlazefirerLoL"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -27,7 +27,7 @@ function Homepage(){
 
             <a
                 className="gitLab"
-                href="https://gitlab.com/kalei7"
+                href="https://gitlab.com/JonMallozzi"
                 target="_blank"
                 rel="noopener noreferrer"
             >
