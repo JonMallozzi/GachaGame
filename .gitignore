@@ -48,3 +48,11 @@ react_site/node_modules/
 react_site/package.json
 react_site/package-lock.json
 
+### Jooby ###
+jooby_backend/conf/application.conf
+jooby_backend/.gradle/
+
+
+# my ignores
+notes.md
+backup/

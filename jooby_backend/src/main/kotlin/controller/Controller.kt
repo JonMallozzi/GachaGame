@@ -1,4 +1,4 @@
-package app
+package controller
 
 import io.jooby.annotations.*
 
@@ -7,6 +7,7 @@ class Controller {
 
   @GET
   fun sayHi(): String {
-    return "Welcome to Jooby!"
+      return "Welcome to Jooby!"
   }
 }
+

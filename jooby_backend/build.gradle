@@ -55,6 +55,14 @@ dependencies {
   // Hibernate Module
   implementation 'io.jooby:jooby-hibernate:2.8.10'
 
+  //flyway
+  implementation 'io.jooby:jooby-flyway:2.8.10'
+
+  //database
+  // https://mvnrepository.com/artifact/org.postgresql/postgresql
+  implementation 'org.postgresql:postgresql:42.2.16'
+
+
 }
 
 test {
