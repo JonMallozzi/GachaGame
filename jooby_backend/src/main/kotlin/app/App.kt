@@ -2,6 +2,10 @@ package app
 
 import controller.Controller
 import controller.UserController
+import graphql.scalars.ExtendedScalars
+import graphql.schema.idl.RuntimeWiring
+import graphql.schema.idl.TypeRuntimeWiring.newTypeWiring
+import graphqlFetcher.DataFetcherBuilder
 import io.jooby.Kooby
 import io.jooby.runApp
 
@@ -11,6 +15,10 @@ import io.jooby.hibernate.TransactionalRequest
 import io.jooby.hikari.HikariModule
 import io.jooby.json.JacksonModule
 import io.jooby.flyway.FlywayModule
+
+import io.jooby.graphql.GraphQLModule
+//import io.jooby.graphql.GraphQLPlaygroundModule is bugged right now
+import io.jooby.graphql.GraphiQLModule
 
 import model.User
 
@@ -34,6 +42,22 @@ class App: Kooby({
   //jooby's entityManager must be declared in the install class and will
   //be passed around to various controllers to perform database operations
   val entityManager = require(EntityManager::class)
+
+  //setting up GraphQL
+  install(GraphQLModule(
+          RuntimeWiring.newRuntimeWiring()
+                  .type(newTypeWiring("Query")
+                          .dataFetchers(DataFetcherBuilder().buildQueryDataFetchers()))
+                  .type(newTypeWiring("Mutation")
+                          .dataFetchers(DataFetcherBuilder().buildMutationDataFetcher()))
+                  .scalar(ExtendedScalars.Date)
+                  .scalar(ExtendedScalars.DateTime)
+                  .build())
+  )
+
+
+  //install(GraphQLPlaygroundModule())
+  install(GraphiQLModule())
 
   //declaring all controllers that will be used in project
   mvc(Controller())

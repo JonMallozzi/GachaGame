@@ -1,7 +1,7 @@
 package model
 
-import java.time.Instant
-import java.time.format.DateTimeFormatter
+import java.time.LocalDate
+import java.time.OffsetDateTime
 import java.util.*
 import javax.persistence.*
 
@@ -9,7 +9,7 @@ import javax.persistence.*
 @Table(name = "users")
 data class User (
         @Id
-        @GeneratedValue
+        //@GeneratedValue
         var id: UUID = UUID.randomUUID(),
 
         @Column(nullable = false)
@@ -22,10 +22,10 @@ data class User (
         var email : String = "",
 
         @Column(nullable = false)
-        var dateOfBirth: String? =  DateTimeFormatter.ISO_INSTANT.format(Instant.now()),
+        var dateOfBirth: LocalDate =  LocalDate.now(),
 
         @Column(nullable = false)
-        var dateCreated: String? =  DateTimeFormatter.ISO_INSTANT.format(Instant.now())
+        var dateCreated: OffsetDateTime =  OffsetDateTime.now()
 ){
 
     @Override

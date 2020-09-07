@@ -51,7 +51,7 @@ react_site/package-lock.json
 ### Jooby ###
 jooby_backend/conf/application.conf
 jooby_backend/.gradle/
-
+jooby_backend/java_pid7544.hprof
 
 # my ignores
 notes.md

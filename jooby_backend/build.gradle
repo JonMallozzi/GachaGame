@@ -46,6 +46,15 @@ dependencies {
   // GraphQL
   implementation 'io.jooby:jooby-graphql:2.8.10'
 
+  // Extended Scalars
+  implementation 'com.graphql-java:graphql-java-extended-scalars:1.1.0'
+
+  //  GraphQL Playground
+  //implementation 'io.jooby:jooby-graphiql-playground:2.8.10'
+
+  //  GraphIQL
+  implementation 'io.jooby:jooby-graphiql:2.8.10'
+
   //  JSON library
   implementation 'io.jooby:jooby-jackson:2.8.10'
 

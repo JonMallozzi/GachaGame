@@ -14,7 +14,7 @@ class UserController(em: EntityManager) {
 
     @Path("/user")
     @GET
-    fun getAllUsers(): Any {
+    fun getAllUsers(): List<User> {
         return entityManager.createQuery("from User", User::class.java).getResultList()
     }
 }
